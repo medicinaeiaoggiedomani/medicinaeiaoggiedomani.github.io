@@ -1,12 +1,175 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Il mio sito</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Medicina &amp; IA: Oggi e Domani</title>
+  <!-- Importazione di Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    /* Reset di base */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: 'Roboto', sans-serif;
+      line-height: 1.6;
+      background: #f4f4f4;
+      color: #333;
+    }
+    
+    /* Header con gradient e testo centrato */
+    header {
+      background: linear-gradient(45deg, #4a90e2, #50c9c3);
+      color: #fff;
+      padding: 2rem 1rem;
+      text-align: center;
+    }
+    
+    header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+    }
+    
+    header p {
+      font-size: 1.2rem;
+    }
+    
+    /* Barra di navigazione */
+    nav {
+      background: #333;
+    }
+    
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+    }
+    
+    nav ul li {
+      margin: 0 1rem;
+    }
+    
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+      padding: 1rem;
+      display: block;
+      transition: background 0.3s;
+    }
+    
+    nav ul li a:hover {
+      background: #555;
+    }
+    
+    /* Sezione Hero con immagine di sfondo */
+    .hero {
+      background: url('https://via.placeholder.com/1500x500') no-repeat center center/cover;
+      height: 500px;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      text-align: center;
+    }
+    
+    .hero h2 {
+      font-size: 3rem;
+      background: rgba(0, 0, 0, 0.5);
+      padding: 1rem 2rem;
+      border-radius: 10px;
+    }
+    
+    /* Contenitore per il contenuto principale */
+    .container {
+      max-width: 1100px;
+      margin: 2rem auto;
+      padding: 1rem;
+    }
+    
+    /* Sezione contenuto */
+    section.content {
+      background: #fff;
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      margin-bottom: 2rem;
+    }
+    
+    section.content h2 {
+      margin-bottom: 1rem;
+    }
+    
+    /* Footer */
+    footer {
+      background: #333;
+      color: #fff;
+      text-align: center;
+      padding: 1rem;
+    }
+    
+    /* Media Query per schermi piccoli */
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 2rem;
+      }
+      .hero {
+        height: 300px;
+      }
+      .hero h2 {
+        font-size: 2rem;
+      }
+      nav ul {
+        flex-direction: column;
+      }
+      nav ul li {
+        margin: 0;
+      }
+    }
+  </style>
 </head>
 <body>
-    <h1>Ciao, benvenuto nel mio sito!</h1>
-    <p>Creato con GitHub Pages.</p>
+  <!-- Header -->
+  <header>
+    <h1>Medicina &amp; IA: Oggi e Domani</h1>
+    <p>Congresso di medicina ed intelligenza artificiale</p>
+  </header>
+  
+  <!-- Navigazione -->
+  <nav>
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Programma</a></li>
+      <li><a href="#">Relatori</a></li>
+      <li><a href="#">Iscrizioni</a></li>
+      <li><a href="#">Contatti</a></li>
+    </ul>
+  </nav>
+  
+  <!-- Sezione Hero -->
+  <div class="hero">
+    <h2>Benvenuti al Congresso</h2>
+  </div>
+  
+  <!-- Contenitore principale -->
+  <div class="container">
+    <section class="content">
+      <h2>Informazioni sul Congresso</h2>
+      <p>
+        In questo spazio potrai inserire tutte le informazioni relative al congresso, come date, sede, programma, relatori e molto altro. 
+        Personalizza questo template a tuo piacimento per adattarlo alle esigenze del tuo evento.
+      </p>
+    </section>
+  </div>
+  
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Medicina &amp; IA: Oggi e Domani. Tutti i diritti riservati.</p>
+  </footer>
 </body>
 </html>
+
