@@ -315,6 +315,15 @@
         margin-bottom: 0.5rem;
       }
     }
+    @media (max-width: 600px) {
+  body {
+    /* Rimuovi il fixed per evitare il problema di zoom */
+    background-attachment: scroll;
+    /* Se necessario, puoi anche sperimentare con background-size:
+       background-size: auto; oppure background-size: 100% auto; */
+  }
+}
+
   </style>
 </head>
 <body>
