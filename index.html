@@ -306,6 +306,10 @@
       nav ul li {
         margin: 0;
       }
+      /* Per dispositivi mobili rimuoviamo il fixed per lo sfondo */
+      body {
+        background-attachment: scroll;
+      }
     }
     @media (max-width: 600px) {
       .session {
@@ -315,15 +319,6 @@
         margin-bottom: 0.5rem;
       }
     }
-    @media (max-width: 600px) {
-  body {
-    /* Rimuovi il fixed per evitare il problema di zoom */
-    background-attachment: scroll;
-    /* Se necessario, puoi anche sperimentare con background-size:
-       background-size: auto; oppure background-size: 100% auto; */
-  }
-}
-
   </style>
 </head>
 <body>
@@ -602,10 +597,11 @@
     <section class="venue" id="venue">
       <h2>Venue</h2>
       <div class="venue-info">
-        <!-- Immagine della Venue: sostituisci "venue.jpg" con il file corretto se disponibile -->
+        <!-- Immagine della Venue: sostituisci "unioneindustriali.jpg" con il file corretto se disponibile -->
         <img src="unioneindustriali.jpg" alt="Unione degli Industriali di Napoli, sala d'Amato">
-        <!-- Embed di Google Maps: sostituisci YOUR_API_KEY con la tua API key oppure usa l'embed fornito da Google Maps -->
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3018.708658467965!2d14.238881475364565!3d40.83436257137541!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x133b085532fdc0f3%3A0xf649655836d7e012!2sUnione%20Industriali%20Napoli!5e0!3m2!1sit!2sit!4v1739122534275!5m2!1sit!2sit" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">Caricamento...</iframe>    </div>
+        <!-- Embed di Google Maps -->
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3018.708658467965!2d14.238881475364565!3d40.83436257137541!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x133b085532fdc0f3%3A0xf649655836d7e012!2sUnione%20Industriali%20Napoli!5e0!3m2!1sit!2sit!4v1739122534275!5m2!1sit!2sit" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">Caricamento...</iframe>
+      </div>
     </section>
     
     <!-- Sezione Contatti -->
@@ -622,4 +618,3 @@
   </footer>
 </body>
 </html>
-
