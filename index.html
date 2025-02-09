@@ -7,65 +7,62 @@
   <!-- Importazione di Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
   <style>
-    /* Reset di base */
+    /* Reset e stile di base */
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
     }
-    
     body {
       font-family: 'Roboto', sans-serif;
       line-height: 1.6;
       background: #f4f4f4;
       color: #333;
     }
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
     
-    /* Header con gradient e testo centrato */
+    /* Header con gradient */
     header {
       background: linear-gradient(45deg, #4a90e2, #50c9c3);
       color: #fff;
       padding: 2rem 1rem;
       text-align: center;
     }
-    
     header h1 {
       font-size: 2.5rem;
       margin-bottom: 0.5rem;
     }
-    
     header p {
       font-size: 1.2rem;
     }
     
-    /* Barra di navigazione */
+    /* Navigazione */
     nav {
       background: #333;
     }
-    
     nav ul {
       list-style: none;
       display: flex;
       justify-content: center;
+      flex-wrap: wrap;
     }
-    
     nav ul li {
       margin: 0 1rem;
     }
-    
     nav ul li a {
       color: #fff;
-      text-decoration: none;
       padding: 1rem;
       display: block;
       transition: background 0.3s;
     }
-    
     nav ul li a:hover {
       background: #555;
     }
     
-    /* Sezione Hero con immagine di sfondo */
+    /* Sezione Hero */
     .hero {
       background: url('https://via.placeholder.com/1500x500') no-repeat center center/cover;
       height: 500px;
@@ -76,7 +73,6 @@
       color: #fff;
       text-align: center;
     }
-    
     .hero h2 {
       font-size: 3rem;
       background: rgba(0, 0, 0, 0.5);
@@ -84,24 +80,79 @@
       border-radius: 10px;
     }
     
-    /* Contenitore per il contenuto principale */
+    /* Contenitore principale */
     .container {
       max-width: 1100px;
       margin: 2rem auto;
       padding: 1rem;
     }
     
-    /* Sezione contenuto */
-    section.content {
+    /* Sezione informazioni generali */
+    section.intro {
       background: #fff;
       padding: 2rem;
       border-radius: 10px;
       box-shadow: 0 0 10px rgba(0,0,0,0.1);
       margin-bottom: 2rem;
     }
-    
-    section.content h2 {
+    section.intro h2 {
       margin-bottom: 1rem;
+    }
+    
+    /* Sezione Programma */
+    section.schedule {
+      background: #fff;
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      margin-bottom: 2rem;
+    }
+    section.schedule h2 {
+      margin-bottom: 1.5rem;
+      text-align: center;
+    }
+    .session {
+      border-bottom: 1px solid #ddd;
+      padding: 1rem 0;
+      display: flex;
+      flex-wrap: wrap;
+    }
+    .session:last-child {
+      border-bottom: none;
+    }
+    .time {
+      flex: 0 0 80px;
+      font-weight: bold;
+      color: #4a90e2;
+      margin-bottom: 0.5rem;
+    }
+    .details {
+      flex: 1;
+      padding-left: 1rem;
+    }
+    .details h3 {
+      font-size: 1.2rem;
+      margin-bottom: 0.5rem;
+    }
+    .details h4 {
+      font-size: 1.1rem;
+      margin: 0.5rem 0;
+      color: #555;
+    }
+    .details p {
+      margin-bottom: 0.5rem;
+      font-size: 1rem;
+    }
+    .details ul {
+      list-style: disc;
+      margin-left: 1.5rem;
+      margin-bottom: 0.5rem;
+      font-size: 1rem;
+    }
+    .subsession {
+      margin-top: 0.5rem;
+      padding-left: 1rem;
+      border-left: 2px solid #eee;
     }
     
     /* Footer */
@@ -112,7 +163,7 @@
       padding: 1rem;
     }
     
-    /* Media Query per schermi piccoli */
+    /* Responsive per dispositivi mobili */
     @media (max-width: 768px) {
       header h1 {
         font-size: 2rem;
@@ -130,6 +181,14 @@
         margin: 0;
       }
     }
+    @media (max-width: 600px) {
+      .session {
+        flex-direction: column;
+      }
+      .time {
+        margin-bottom: 0.5rem;
+      }
+    }
   </style>
 </head>
 <body>
@@ -143,7 +202,7 @@
   <nav>
     <ul>
       <li><a href="#">Home</a></li>
-      <li><a href="#">Programma</a></li>
+      <li><a href="#programma">Programma</a></li>
       <li><a href="#">Relatori</a></li>
       <li><a href="#">Iscrizioni</a></li>
       <li><a href="#">Contatti</a></li>
@@ -157,12 +216,193 @@
   
   <!-- Contenitore principale -->
   <div class="container">
-    <section class="content">
+    <!-- Sezione Informazioni Generali -->
+    <section class="intro">
       <h2>Informazioni sul Congresso</h2>
       <p>
-        In questo spazio potrai inserire tutte le informazioni relative al congresso, come date, sede, programma, relatori e molto altro. 
-        Personalizza questo template a tuo piacimento per adattarlo alle esigenze del tuo evento.
+        In questo spazio potrai inserire tutte le informazioni relative al congresso, come date, sede, programma, relatori e molto altro.
       </p>
+    </section>
+    
+    <!-- Sezione Programma -->
+    <section class="schedule" id="programma">
+      <h2>Programma del Congresso</h2>
+      
+      <!-- 09:00 - Saluto Autorità -->
+      <div class="session">
+        <div class="time">09:00</div>
+        <div class="details">
+          <h3>SALUTO AUTORITÀ</h3>
+          <ul>
+            <li>Dott. Verdoliva – Direttore ASLNA1</li>
+            <li>Dott. Maria Corvino</li>
+            <li>Dott. Costanzo (Unione Indust.)</li>
+            <li>Ing. Manfredi</li>
+            <li>Ingegneria ??? (preside/capo Dipartimento)</li>
+            <li>Rappresentanti dip. sanità/tecnologie Regione Campania</li>
+          </ul>
+        </div>
+      </div>
+      
+      <!-- 09:30 - I Sessione -->
+      <div class="session">
+        <div class="time">09:30</div>
+        <div class="details">
+          <h3>I Sessione “su quali obiettivi deve evolvere l’A.I. in sanità”</h3>
+          <p><strong>Moderatori:</strong> C. Mauro</p>
+          <div class="subsession">
+            <h4>Limiti, inefficienze e insostenibilità dell’attuale Sistema sanitario</h4>
+            <ul>
+              <li>Relatore Medico: dott. F. De Leo</li>
+              <li>Relatore Soc. Civile: Ass. Pazienti/giornalista</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      
+      <!-- 10:00 - Rivoluzionare il Sistema Sanità -->
+      <div class="session">
+        <div class="time">10:00</div>
+        <div class="details">
+          <h3>Rivoluzionare il Sistema Sanità per ridurre le disuguaglianze</h3>
+          <ul>
+            <li>Rel. Medico: B. Guillaro</li>
+            <li>Rel. Tecnico</li>
+          </ul>
+        </div>
+      </div>
+      
+      <!-- 11:00 - Il paziente “cliente” -->
+      <div class="session">
+        <div class="time">11:00</div>
+        <div class="details">
+          <h3>Perché il paziente “cliente” potrebbe diventare parte attiva e fornitore di dati</h3>
+          <p>Rel. Tecnico</p>
+        </div>
+      </div>
+      
+      <!-- 11:30 - II Sessione -->
+      <div class="session">
+        <div class="time">11:30</div>
+        <div class="details">
+          <h3>II Sessione “che cosa ci può dare l’A.I generativa in sanità”</h3>
+          <p><strong>Moderatori:</strong> B. Tuccillo, G. Bruzzese, G. Esposito</p>
+          <div class="subsession">
+            <h4>Assistenza Virtuale: ruolo del “chatbot” nelle malattie croniche</h4>
+            <ul>
+              <li>Rel. Tecnico</li>
+              <li>Rel. Medico</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      
+      <!-- 12:00 - A.I. nei diversi settori assistenziali -->
+      <div class="session">
+        <div class="time">12:00</div>
+        <div class="details">
+          <h3>A.I. nei diversi settori assistenziali</h3>
+          <ul>
+            <li><strong>Cardiologia:</strong> Rel. Medico/Tecnico (elettromedicali) de Divitiis??</li>
+            <li><strong>Prevenzione:</strong> Rel. Medico/Tecnico (elettromedicali)</li>
+            <li><strong>Gestione delle emergenze:</strong> Rel. Medico/Tecnico (elettromedicali)</li>
+            <li><strong>Imaging:</strong> Dir. Radiologia Osp. Mare??</li>
+            <li><strong>Oncologia:</strong> Rel. Medico/Tecnico (elettromedicali) (Medico radiologia Pascal, Monaldi o Univ.)</li>
+          </ul>
+        </div>
+      </div>
+      
+      <!-- 14:00 - LUNCH -->
+      <div class="session">
+        <div class="time">14:00</div>
+        <div class="details">
+          <h3>LUNCH</h3>
+        </div>
+      </div>
+      
+      <!-- 15:00 - III Sessione -->
+      <div class="session">
+        <div class="time">15:00</div>
+        <div class="details">
+          <h3>III Sessione “perché gli algoritmi impattano sulla nostra organizzazione”</h3>
+          <p><strong>Moderatori:</strong> (da definire)</p>
+          <div class="subsession">
+            <h4>Farmacia e sanità digitale: volano per nuove e diverse reti nel territorio</h4>
+            <p>Rel. NOVARTIS</p>
+          </div>
+        </div>
+      </div>
+      
+      <!-- 15:30 - A.I. e le figure assistenziali -->
+      <div class="session">
+        <div class="time">15:30</div>
+        <div class="details">
+          <h3>A.I. come cambierebbero le figure assistenziali</h3>
+          <p>Rel. Medico</p>
+        </div>
+      </div>
+      
+      <!-- 16:00 - IV Sessione -->
+      <div class="session">
+        <div class="time">16:00</div>
+        <div class="details">
+          <h3>IV Sessione: “come si governa una tecnologia così pervasiva”</h3>
+          <p><strong>Moderatori:</strong> F. Pommolli</p>
+          <div class="subsession">
+            <h4>Perché in sanità c’è allarme e “paura del nuovo”</h4>
+            <p>Rel. Medico</p>
+          </div>
+        </div>
+      </div>
+      
+      <!-- 16:20 - Sicurezza e gestione dei “Al Bias” -->
+      <div class="session">
+        <div class="time">16:20</div>
+        <div class="details">
+          <h3>Sicurezza e gestione dei cosiddetti “Al Bias”</h3>
+          <p>Gli algoritmici della A.I. possono creare distorsioni dalla realtà?</p>
+          <p>Rel. Tecnico</p>
+        </div>
+      </div>
+      
+      <!-- 16:40 - Analisi giuridica ed etica -->
+      <div class="session">
+        <div class="time">16:40</div>
+        <div class="details">
+          <h3>Analisi giuridica ed etica</h3>
+          <p>Religioso/Magistrato (Padre Paolo Benanti – prof. Univ. Seattle ??)</p>
+        </div>
+      </div>
+      
+      <!-- 17:00 - V Sessione -->
+      <div class="session">
+        <div class="time">17:00</div>
+        <div class="details">
+          <h3>V Sessione</h3>
+          <p><strong>Moderatori:</strong> (da definire)</p>
+          <p>Concorso tra le migliori Startup in Sanità (Presentazione entro 28 Febbraio)</p>
+        </div>
+      </div>
+      
+      <!-- 18:30 - VI Sessione -->
+      <div class="session">
+        <div class="time">18:30</div>
+        <div class="details">
+          <h3>VI Sessione: Sanità quale futuro</h3>
+          <p>Introduzione: dott. Bruzzese</p>
+          <p>Come gestire l’inevitabile evoluzione della sanità</p>
+          <p><strong>Moderatori:</strong> Rappresentante Regione/Università??</p>
+        </div>
+      </div>
+      
+      <!-- 19:00 - Saluti -->
+      <div class="session">
+        <div class="time">19:00</div>
+        <div class="details">
+          <h3>SALUTI</h3>
+        </div>
+      </div>
+      
     </section>
   </div>
   
@@ -172,4 +412,3 @@
   </footer>
 </body>
 </html>
-
