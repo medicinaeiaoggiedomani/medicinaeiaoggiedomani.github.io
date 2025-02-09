@@ -16,7 +16,9 @@
     body {
       font-family: 'Roboto', sans-serif;
       line-height: 1.6;
-      background: #f4f4f4;
+      /* Sfondo impostato con l'immagine "napoli.jpg" */
+      background: url('napoli.jpg') no-repeat center center fixed;
+      background-size: cover;
       color: #333;
     }
     a {
@@ -64,7 +66,6 @@
     
     /* Sezione Hero */
     .hero {
-      background: url('https://via.placeholder.com/1500x500') no-repeat center center/cover;
       height: 500px;
       position: relative;
       display: flex;
@@ -73,9 +74,21 @@
       color: #fff;
       text-align: center;
     }
+    /* Overlay per migliorare la leggibilità del testo */
+    .hero::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.4);
+      z-index: 1;
+    }
     .hero h2 {
+      position: relative;
+      z-index: 2;
       font-size: 3rem;
-      background: rgba(0, 0, 0, 0.5);
       padding: 1rem 2rem;
       border-radius: 10px;
     }
@@ -220,6 +233,37 @@
       border: none;
     }
     
+    /* Sezione Venue */
+    section.venue {
+      background: #fff;
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      margin-bottom: 2rem;
+      text-align: center;
+    }
+    section.venue h2 {
+      margin-bottom: 1.5rem;
+    }
+    .venue-info {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+    }
+    .venue-info img {
+      max-width: 400px;
+      width: 100%;
+      border-radius: 10px;
+      box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    }
+    .venue-info iframe {
+      max-width: 600px;
+      width: 100%;
+      height: 450px;
+      border: 0;
+    }
+    
     /* Sezione Contatti */
     section.contacts {
       background: #fff;
@@ -287,6 +331,7 @@
       <li><a href="#programma">Programma</a></li>
       <li><a href="#organizzatori">Organizzatori</a></li>
       <li><a href="#iscrizioni">Iscrizioni</a></li>
+      <li><a href="#venue">Venue</a></li>
       <li><a href="#contatti">Contatti</a></li>
     </ul>
   </nav>
@@ -302,10 +347,10 @@
     <section class="intro">
       <h2>Informazioni sul Congresso</h2>
       <p>
-        <strong>Medicina &amp; IA: Oggi e Domani</strong> è un congresso pionieristico che si terrà il 6 Giugno 2025 a Napoli. Quest'ultimo riunisce i massimi esperti nel campo della medicina e dell'intelligenza artificiale per analizzare le sinergie, le opportunità e le sfide che emergono dal connubio tra innovazione tecnologica e pratiche mediche avanzate.
+        <strong>Medicina &amp; IA: Oggi e Domani</strong> è un congresso pionieristico che si terrà il 6 Giugno 2025 a Napoli. Quest'evento riunisce i massimi esperti nel campo della medicina e dell'intelligenza artificiale per analizzare le sinergie, le opportunità e le sfide derivanti dall'integrazione tra innovazione tecnologica e pratiche mediche avanzate.
       </p>
       <p>
-        L'evento si propone di esplorare come l'IA possa rivoluzionare la diagnosi, il trattamento e la gestione delle patologie, promuovendo uno scambio di idee e strategie volte a migliorare la qualità della vita e l'efficienza del sistema sanitario.
+        L'evento si propone di esplorare come l'IA possa rivoluzionare la diagnosi, il trattamento e la gestione delle patologie, promuovendo uno scambio di idee e strategie finalizzato a migliorare la qualità della vita e l'efficienza del sistema sanitario.
       </p>
     </section>
     
@@ -541,6 +586,18 @@
       <p>Compila il modulo sottostante per iscriverti al congresso. Le risposte saranno raccolte in un Google Sheet, che potrai esportare in formato Excel.</p>
       <!-- Sostituisci l'URL sottostante con quello del tuo Google Form -->
       <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeNaUyjsG8lag0n-XTUtJTgRfhiJ0GnFxTxgnG7lwhL-NhqHw/viewform?usp=dialog" width="640" height="800" frameborder="0" marginheight="0" marginwidth="0">Caricamento…</iframe>
+    </section>
+    
+    <!-- Sezione Venue -->
+    <section class="venue" id="venue">
+      <h2>Venue</h2>
+      <p>Il congresso si svolgerà presso l'Unione degli Industriali di Napoli, sala d'Amato.</p>
+      <div class="venue-info">
+        <!-- Immagine della Venue: sostituisci "venue.jpg" con il file corretto se disponibile -->
+        <img src="venue.jpg" alt="Unione degli Industriali di Napoli, sala d'Amato">
+        <!-- Embed di Google Maps: sostituisci YOUR_API_KEY con la tua API key oppure usa l'embed fornito da Google Maps -->
+        <iframe src="https://www.google.com/maps/embed/v1/place?key=YOUR_API_KEY&q=Unione+degli+Industriali+di+Napoli,+sala+d'Amato" allowfullscreen loading="lazy"></iframe>
+      </div>
     </section>
     
     <!-- Sezione Contatti -->
