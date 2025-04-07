@@ -27,35 +27,40 @@
     
     /* Header con gradient */
     header {
-      /* Rimane il tuo gradient */
       background: linear-gradient(45deg, #4a90e2, #50c9c3);
       color: #fff;
-      /* Rimuoviamo il text-align: center; perché useremo flex */
       padding: 2rem 1rem;
     }
 
     /* Nuovo contenitore per immagini + titolo */
     .header-content {
-      display: flex;              /* Mettiamo su una riga */
-      align-items: center;        /* Centra verticalmente */
-      justify-content: space-between; /* Spaziatura tra sinistra e destra */
-      max-width: 1200px;         /* Larghezza massima del contenitore */
-      margin: 0 auto;            /* Centra il contenitore orizzontalmente */
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      max-width: 1200px;
+      margin: 0 auto;
     }
 
-    /* Stile per le immagini del logo */
+    /* Stile per le immagini del logo con effetto 3D */
     .header-logo {
-      width: 80px;              /* Puoi regolare la dimensione a piacere */
-      height: 80px;
-      border-radius: 50%;       /* Rende l’immagine circolare */
-      object-fit: cover;        /* Taglia l’immagine in base al contenitore circolare */
-      background: transparent;  /* Assicura sfondo trasparente (se l'immagine lo consente) */
+      width: 70px;
+      height: 70px;
+      border-radius: 50%;
+      object-fit: cover;
+      background: transparent;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+      transform: translateY(-3px);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .header-logo:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 6px 10px rgba(0, 0, 0, 0.4);
     }
 
     /* Contenitore del titolo e data */
     .title {
-      text-align: center;  /* Centra il testo orizzontalmente */
-      flex: 1;             /* Si espande per occupare lo spazio tra i loghi */
+      text-align: center;
+      flex: 1;
     }
 
     header h1 {
@@ -66,7 +71,7 @@
       font-size: 1.2rem;
     }
     
-    /* Navigazione */
+    /* Resto del CSS invariato */
     nav {
       background: #333;
     }
@@ -89,7 +94,6 @@
       background: #555;
     }
     
-    /* Sezione Hero */
     .hero {
       height: 500px;
       position: relative;
@@ -117,7 +121,6 @@
       border-radius: 10px;
     }
     
-    /* Contenitore principale */
     .container {
       max-width: 1100px;
       margin: 2rem auto;
@@ -359,8 +362,7 @@
 </head>
 <body>
   <!-- Header -->
-  <header>
-    <!-- Nuovo contenitore con flex per logo sinistro, testo, logo destro -->
+ <header>
     <div class="header-content">
       <img src="logo.jpg" alt="Logo sinistra" class="header-logo">
 
