@@ -16,7 +16,6 @@
     body {
       font-family: 'Roboto', sans-serif;
       line-height: 1.6;
-      /* Sfondo impostato con l'immagine "napoli.jpg" */
       background: url('napoli.jpg') no-repeat center center fixed;
       background-size: cover;
       color: #333;
@@ -74,7 +73,6 @@
       color: #fff;
       text-align: center;
     }
-    /* Overlay per migliorare la leggibilità del testo */
     .hero::before {
       content: "";
       position: absolute;
@@ -189,11 +187,24 @@
       margin-bottom: 1rem;
       color: #4a90e2;
     }
+    /* Regola di base per le griglie */
     .organizer-cards {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
       gap: 1.5rem;
       margin-bottom: 1.5rem;
+    }
+    /* Layout per le General Chairs */
+    .organizer-cards.chairs {
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+    /* Layout per gli Speakers: 5 per riga */
+    .organizer-cards.speakers {
+      grid-template-columns: repeat(5, 1fr);
+    }
+    /* Opzionale: ridimensiona le immagini degli speakers */
+    .organizer-cards.speakers .organizer-card img {
+      width: 120px;
+      height: 120px;
     }
     .organizer-card {
       background: #f9f9f9;
@@ -306,7 +317,6 @@
       nav ul li {
         margin: 0;
       }
-      /* Per dispositivi mobili rimuoviamo il fixed per lo sfondo */
       body {
         background-attachment: scroll;
       }
@@ -454,7 +464,7 @@
       
       <!-- General Chairs -->
       <h3>General Chairs</h3>
-      <div class="organizer-cards">
+      <div class="organizer-cards chairs">
         <div class="organizer-card">
           <img src="marcoaruta.jpg" alt="Marco Aruta">
           <h4>Marco Aruta</h4>
@@ -479,13 +489,12 @@
       
       <!-- Speakers -->
       <h3>Speakers</h3>
-      <div class="organizer-cards">
+      <div class="organizer-cards speakers">
         <div class="organizer-card">
           <img src="marcoaruta.jpg" alt="Marco Aruta">
           <h4>Marco Aruta</h4>
           <p>Università degli Studi di Napoli Federico II</p>
         </div>
-      
         <div class="organizer-card">
           <img src="MassimoBisogno.png" alt="Massimo Bisogno">
           <h4>Massimo Bisogno</h4>
@@ -560,7 +569,6 @@
     <section class="registrations" id="iscrizioni">
       <h2>Iscrizioni</h2>
       <p>Compila il modulo sottostante per iscriverti al congresso. Le risposte saranno raccolte in un Google Sheet, che potrai esportare in formato Excel.</p>
-      <!-- Sostituisci l'URL sottostante con quello del tuo Google Form -->
       <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeNaUyjsG8lag0n-XTUtJTgRfhiJ0GnFxTxgnG7lwhL-NhqHw/viewform?usp=dialog" width="640" height="800" frameborder="0" marginheight="0" marginwidth="0">Caricamento…</iframe>
     </section>
     
@@ -568,9 +576,7 @@
     <section class="venue" id="venue">
       <h2>Venue</h2>
       <div class="venue-info">
-        <!-- Immagine della Venue: sostituisci "unioneindustriali.jpg" con il file corretto se disponibile -->
         <img src="unioneindustriali.jpg" alt="Unione degli Industriali di Napoli, sala d'Amato">
-        <!-- Embed di Google Maps -->
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3018.708658467965!2d14.238881475364565!3d40.83436257137541!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x133b085532fdc0f3%3A0xf649655836d7e012!2sUnione%20Industriali%20Napoli!5e0!3m2!1sit!2sit!4v1739122534275!5m2!1sit!2sit" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">Caricamento...</iframe>
       </div>
     </section>
