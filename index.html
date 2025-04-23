@@ -320,7 +320,6 @@
       font-size: 1.1rem;
       margin-bottom: 0.5rem;
     }
-    
     /* Footer */
     footer {
       background: #333;
@@ -328,7 +327,13 @@
       text-align: center;
       padding: 1rem;
     }
-    
+    .privacy-notice {
+      background: #f1f1f1; 
+      padding: 1rem; 
+      font-size: 0.9rem; 
+      text-align: center; 
+      margin-bottom: 1rem; 
+    }
     /* Responsive per dispositivi mobili */
     @media (max-width: 768px) {
       header h1 {
@@ -361,6 +366,24 @@
   </style>
 </head>
 <body>
+  <!-- Cookie Consent Banner -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.js"></script>
+  <script>
+    window.addEventListener("load", function(){
+      window.cookieconsent.initialise({
+        type: "opt-in",
+        palette: { popup: { background: "#000" }, button: { background: "#f1d600" } },
+        position: "bottom",
+        content: {
+          message: "Ai sensi del regolamento (UE) 2016/679, i dati personali saranno trattati nel rispetto delle normative vigenti sulla protezione dei dati personali e utilizzati esclusivamente per informare su altri eventi e iniziative.",
+          dismiss: "Accetta",
+          deny: "Rifiuta",
+          link: "Leggi di più",
+          href: "privacy.html"
+        }
+      });
+    });
+  </script>
   <!-- Header -->
  <header>
     <div class="header-content">
@@ -628,7 +651,10 @@
       <p>Email: <a href="mailto:aritur@aritur.it" style="color: blue; text-decoration: underline;">aritur@aritur.it</a></p>
     </section>
   </div>
-  
+    <!-- Privacy Notice Text -->
+  <div class="privacy-notice">
+    <p>Ai sensi del regolamento (UE) 2016/679, i dati personali saranno trattati nel rispetto delle normative vigenti sulla protezione dei dati personali e utilizzati esclusivamente per informare su altri eventi e iniziative. <a href="privacy.html">Si rimanda al testo completo per tutte le ulteriori disposizioni.</a></p>
+  </div>
   <!-- Footer -->
   <footer>
     <p>&copy; Marco Aruta - 2025 Medicina &amp; IA: Oggi e Domani. Tutti i diritti riservati.</p>
