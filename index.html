@@ -371,17 +371,14 @@
   <!-- Cookie Consent Banner -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.js"></script>
   <script>
-    window.addEventListener("load", function(){
+    window.addEventListener('load',function(){
       window.cookieconsent.initialise({
-        type: "opt-in",
-        palette: { popup: { background: "#000" }, button: { background: "#f1d600" } },
-        position: "bottom",
-        content: {
-          message: "Ai sensi del regolamento (UE) 2016/679, i dati personali saranno trattati nel rispetto delle normative vigenti sulla protezione dei dati personali e utilizzati esclusivamente per informare su altri eventi e iniziative.",
-          dismiss: "Accetta",
-          deny: "Rifiuta",
-          link: "Leggi di più",
-          href: "https://www.garanteprivacy.it/documents/10160/0/Regolamento+UE+2016+679.+Arricchito+con+riferimenti+ai+Considerando+Aggiornato+alle+rettifiche+pubblicate+sulla+Gazzetta+Ufficiale++dell%27Unione+europea+127+del+23+maggio+2018.pdf/1bd9bde0-d074-4ca8-b37d-82a3478fd5d3?version=1.9"
+        type:'opt-in',
+        palette:{ popup:{ background:'rgba(0,123,255,0.8)' }, button:{ background:'#007bff' } },
+        position:'bottom',
+        content:{
+          message:'Ai sensi del regolamento (UE) 2016/679, i dati personali saranno trattati nel rispetto delle normative vigenti sulla protezione dei dati personali e utilizzati esclusivamente per informare su altri eventi e iniziative.',
+          dismiss:'Accetta', deny:'Rifiuta', link:'Leggi di più', href:'privacy.html'
         }
       });
     });
@@ -434,89 +431,69 @@
     
     <!-- Sezione Programma -->
     <section class="schedule" id="programma">
-      <h2>Programma del Congresso</h2>
-      
-      <!-- 09:00 - SALUTO AUTORITÀ -->
+      <h2>PROGRAMMA PRELIMINARE</h2>
+      <p>Medicina &amp; I.A.: Oggi e Domani</p>
+      <p>Napoli, Unione Industriali - 5 Giugno 2025</p>
+      <div class="session">
+        <div class="time"></div>
+        <div class="details"><h3>OPEN COFFEE</h3></div>
+      </div>
       <div class="session">
         <div class="time">09:00</div>
         <div class="details">
           <h3>SALUTO AUTORITÀ</h3>
           <ul>
-            <li>Ing. Ciro Verdoliva – ASLNA1</li>
-            <li>Prof. Fabio Villone – Università degli Studi di Napoli Federico II</li>
-            <li>Dott. Costanzo Jannotti Pecci – Unione Industriali</li>
-            <li>Dott. Valeria Fascione – Assessore Ricerca e Start up Regione Campania</li>
-            <li>Dott. Massimo Bisogno – Direttore Uff. Speciale per la Crescita e la Transizione Digitale Regione Campania</li>
+            <li>Direttore Generale ASLNA1</li>
+            <li>Direttore Dipartimento Ingegneria</li>
+            <li>Presidente Unione Industriali</li>
+            <li>Assessore Ricerca e Start up Regione Campania</li>
+            <li>Direttore Uff. Speciale per la Crescita e la Transizione Digitale Regione Campania</li>
           </ul>
         </div>
       </div>
-      
-      <!-- 09:30 - Coffee-break -->
-      <div class="session">
-        <div class="time">09:30</div>
-        <div class="details">
-          <h3>Coffee-break</h3>
-        </div>
-      </div>
-      
-      <!-- 10:30 - I Sessione “A.I. e salute: generare conoscenze, supportare decisioni, coordinare azioni” -->
       <div class="session">
         <div class="time">10:30</div>
         <div class="details">
           <h3>I Sessione “A.I. e salute: generare conoscenze, supportare decisioni, coordinare azioni”</h3>
-          <p><strong>Tavola Rotonda:</strong> introduce: B. Tuccillo</p>
-          <p><strong>Oratori:</strong> C. Sansone, B. Siciliano, G. Ventre, A. Murano, F. De Leo</p>
+          <p><strong>Tavola Rotonda introduce:</strong> B. Tuccillo</p>
+          <p><strong>Oratori:</strong> C. Sansone, B. Siciliano, F. Ficuciello, G. Ventre, A. Murano, F. De Leo</p>
           <p><strong>Discussant:</strong> P. Spadaro, G. Napolitano</p>
         </div>
       </div>
-      
-      <!-- 12:00 - II Sessione “2025: limiti e aspettative dell’attuale Sistema Sanitario” -->
       <div class="session">
         <div class="time">12:00</div>
         <div class="details">
           <h3>II Sessione “2025: limiti e aspettative dell’attuale Sistema Sanitario”</h3>
-          <p><strong>Tavola Rotonda:</strong> introduce E. Di Lorenzo (Giornalista RAI)</p>
+          <p><strong>Tavola Rotonda introduce:</strong> E. De Lorenzo (Giornalista RAI)</p>
           <p><strong>Oratori:</strong> A. Palmese, R. Cananzi, C. Mauro, G. Esposito, M. Scherillo</p>
           <p><strong>Discussant:</strong> A. Tuccillo, M. de Divitiis</p>
         </div>
       </div>
-      
-      <!-- 13:30 - LUNCH -->
       <div class="session">
         <div class="time">13:30</div>
-        <div class="details">
-          <h3>LUNCH</h3>
-        </div>
+        <div class="details"><h3>LUNCH</h3></div>
       </div>
-      
-      <!-- 15:00 - III Sessione “A.I. sta già cambiando la sanità?” -->
       <div class="session">
         <div class="time">15:00</div>
         <div class="details">
           <h3>III Sessione “A.I. sta già cambiando la sanità?”</h3>
-          <p><strong>Tavola Rotonda:</strong> introduce C. Indolfi</p>
-          <p><strong>Oratori:</strong> F. Scotto di Uccio, M. Spadafora, E. Di Lorenzo, P. Calabrò, P. Golino</p>
-          <p><strong>Discussant:</strong> M. Boccalatte, A. Buonomo</p>
+          <p><strong>Tavola Rotonda introduce:</strong> C. Indolfi</p>
+          <p><strong>Oratori:</strong> F. Scotto di Uccio, M. Spadafora, E. Di Lorenzo, P. Calabrò</p>
+          <p><strong>Discussant:</strong> M. Boccalatte, M. Sabatella</p>
         </div>
       </div>
-      
-      <!-- 16:00 - IV Sessione: Sanità quale futuro -->
       <div class="session">
         <div class="time">16:00</div>
         <div class="details">
-          <h3>IV Sessione: Sanità quale futuro</h3>
-          <p><strong>Tavola Rotonda:</strong> introduce M. Aruta e P. Tammaro</p>
+          <h3>IV Sessione: Sanità quale futuro <small>(Non accreditata ECM)</small></h3>
+          <p><strong>Tavola Rotonda introduce:</strong> M. Aruta, P. Tammaro, V. Lipardi</p>
           <p>Concorso tra le migliori Startup in Sanità</p>
           <p><strong>Discussant:</strong> Ingegneri</p>
         </div>
       </div>
-      
-      <!-- 18:00 - Fine Lavori -->
       <div class="session">
         <div class="time">18:00</div>
-        <div class="details">
-          <h3>Fine Lavori</h3>
-        </div>
+        <div class="details"><h3>Consegna Questionari</h3></div>
       </div>
     </section>
     
@@ -646,11 +623,21 @@
     <!-- Sezione Contatti -->
     <section class="contacts" id="contatti">
       <h2>Contatti</h2>
-      <p><strong>Segreteria Organizzativa &amp; Segreteria ECM</strong></p>
-      <p>Aritur srl - MDG Solutions</p>
-      <p>Via S. Giacomo, 37 – 80133 Napoli &nbsp;&nbsp;&nbsp; | &nbsp;&nbsp;&nbsp; Via M. Kerbaker, 23 – 80129 Napoli</p>
-      <p>Tel.: 081.5528969 &nbsp;&nbsp;&nbsp; Fax: 081.5520877 &nbsp;&nbsp;&nbsp; Tel.: 389 9098429</p>
-      <p>Email: <a href="mailto:aritur@aritur.it" style="color: blue; text-decoration: underline;">aritur@aritur.it</a></p>
+      <div class="contacts-grid">
+        <div class="contact-block">
+          <h3>Segreteria Organizzativa</h3>
+          <p>Aritur Srl</p>
+          <p>Via S. Giacomo, 37 - 80133 Napoli</p>
+          <p>Tel. 081.5528969 Fax 081.5520877</p>
+          <p>Email: <a href="mailto:aritur@aritur.it">aritur@aritur.it</a></p>
+        </div>
+        <div class="contact-block">
+          <h3>Provider ECM id. 7259</h3>
+          <p>MDG Solutions Srls</p>
+          <p>Via M. Kerbaker, 23 - 80129 Napoli</p>
+          <p>Tel. 389 9098429</p>
+        </div>
+      </div>
     </section>
   </div>
   <!-- Footer -->
